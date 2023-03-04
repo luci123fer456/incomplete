@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main(void) 
+{
+  char str[100];
+  printf("enter the string\n");
+ scanf("%s",&str);
+  int len=strlen(str);
+  
+  printf("the string entered is %s\n",&str);
+  int uni;
+  //to find the number of unique characters
+ 
+  char num[100];
+num[0]=str[0];
+  
+  for(int i=1;i<len;i++)
+{
+   int count=0;
+  int len1=strlen(num);
+  for(int j=0;j<len1;j++)
+  if(str[i]!=num[j])
+  {
+    count=count+1;
+  }
+  
+  
+      
+  }
+  uni=strlen(num);
+  printf("unique characters are %i\n",uni);
+  
+  
+
+  printf("enter the the number of unique characters to be fetched\n");
+  scanf("%i",&uni);
+  
+}

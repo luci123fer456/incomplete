@@ -1,0 +1,17 @@
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+    arr1=list(arr)
+    arr1.sort()
+    len1=len(arr1)
+    count=1
+    if(arr1[len1-1]!=arr1[len1-2]):
+        print(arr1[len1-2])
+    else:
+        for i in range(len1-1,0):
+            if(arr1[i]==arr1[i-1]):
+                count=count+1
+            else:
+                break
+        print(arr1[len1-1-count])             
+    

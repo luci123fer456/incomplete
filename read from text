@@ -1,0 +1,30 @@
+if __name__ == '__main__':
+    N=int(input())
+list1=[]
+for i in range (0,N):
+  val=str(input())
+  list1.append(val)  
+for i in range(0,len(list1)):
+  op=list1[i]
+  if op== 'print':
+    print(str(list1))
+  elif op=='sort':
+    sort(list1)
+  elif op=='pop' :
+    list1.pop((len(list1)-1))
+  elif op=='reverse':
+    rev1=list1[::-1] 
+  elif 'insert' in op :
+    list2=op.split()
+    list1.insert(list2[1],list2[2])
+  elif 'remove' in op :
+    list3=op.split()
+    for i in range(0,len(list1)):
+        if list1[i]==list3[1]:
+            list1pop(i)
+            break
+  elif 'append' in op :
+    list4=op.split()
+    list1.append(list4[1])            
+
+    

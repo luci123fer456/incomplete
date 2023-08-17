@@ -1,0 +1,23 @@
+class Solution(object):
+    def maxProfit(self, prices):
+        arr=list(prices)
+        arr.sort()
+         
+        length1=len(prices)-1
+        i=0
+        min_val=arr[i]
+        max_val=arr[length1]
+        if(len(prices)==0 or len(prices)==1):
+            return 0
+        while(prices.index(max_val)<prices.index(min_val)):
+            length1=length1-1
+            max_val=arr[length1]
+            if(prices.index(max_val)==0):
+                i=i+1
+                min_val=arr[i]
+                max_val=arr[len(prices)-1]
+                
+        print(max_val,min_val)   
+        max_pro=max_val-min_val
+
+        return max_pro     
